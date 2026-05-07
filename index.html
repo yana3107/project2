@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,29 +10,35 @@
 <section class="services">
   <div class="services__container">
     
-    <h2 class="services__title">Услуги и сервисы</h2>
+    <h1 class="services__title">Услуги и сервисы</h1>
 
-    <div class="services__tabs">
-      <button class="services__tab services__tab--active">
-        Ремонтируемые устройства
-      </button>
-      <button class="services__tab">Дополнительные услуги</button>
-      <button class="services__tab">Цены</button>
-    </div>
+<nav class="services__tabs" aria-label="Меню услуг">
+  <button class="services__tab services__tab--state--active" type="button">
+      Ремонтируемые устройства
+  </button>
+    <button class="services__tab" type="button">Дополнительные услуги</button>
+      <button class="services__tab" type="button">Цены</button>
+      <button class="services__tab" type="button">Адреса сервисных центров</button>
+      <button class="services__tab" type="button">Специальные цены</button>
+      <button class="services__tab" type="button">Отзывы</button>
+    </nav>
 
     <div class="services__content">
+      <div class="services__description">
         <p class="services__text">
-        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-     </p> 
+          Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+          Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+        </p>
+<p class="services__text">
+  Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера,
+ что подтверждает большое количество постоянных клиентов.
+</p>
+<a href="#" class="services__more"> Читать дальше</a>
+</div>
 
-    <a href="#" class="services__more">
-      Читать дальше
-    </a>
-    <img src="/_MG_3223.png" alt="CPS" class="services__image">
-
-  </div>
-</section>
-    
+<img src="./_MG_3223.png" alt="фото сервисного центра CPS" class="services__image">
+</div>
+    </div>
+    </section>
 </body>
 </html>

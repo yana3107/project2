@@ -1,24 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "TTLakes.zip", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "TTLakes.zip";
+  src: url("./fonts/TTlakes-Regular.woff") format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TTLakes.zip";
+  src: url("./fonts/TTlakes-Bold.woff") format("woff");
+  font-weight: 700;
 }
 
 .services {
   padding: 16px;
 }
 
+.services__container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
 .services__title {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 16px;
 }
 
-/* вкладки */
 .services__tabs {
   display: flex;
   overflow-x: auto;
   gap: 8px;
   margin-bottom: 16px;
+  scrollbar-width: none;
+}
+
+.services__tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .services__tab {
@@ -27,14 +54,20 @@ body {
   border: 1px solid #ccc;
   background: transparent;
   border-radius: 6px;
+  cursor: pointer;
 }
 
-.services__tab--active {
+.services__tab--state--active {
   border-color: #00c6a9;
 }
 
-/* контент */
 .services__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.services__description {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -48,7 +81,7 @@ body {
 .services__more {
   color: #00c6a9;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .services__image {
@@ -63,11 +96,12 @@ body {
     gap: 24px;
   }
 
-  .services__text {
-    max-width: 50%;
+  .services__description {
+    width: 50%;
   }
 
   .services__image {
+    width: 50%;
     max-width: 50%;
   }
 }
